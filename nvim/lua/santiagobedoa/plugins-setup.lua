@@ -100,6 +100,19 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+	-- README previewer
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
+
+	-- easymotion / jump to a word
+	use("easymotion/vim-easymotion")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

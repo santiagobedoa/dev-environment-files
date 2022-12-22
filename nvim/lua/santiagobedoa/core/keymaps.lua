@@ -56,3 +56,10 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- markdown-preview
+keymap.set("n", "<leader>mdp", ":MarkdownPreview<CR>") -- start markdown preview
+keymap.set("n", "<leader>mds", ":MarkdownPreviewStop<CR>") -- stop markdown preview
+
+-- easymotion
+-- <leader><leader>s -- jump to a word
