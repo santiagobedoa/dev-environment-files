@@ -58,6 +58,7 @@ return packer.startup(function(use)
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+	-- WARNING! remember to install ripgrep (brew install ripgrep) since is required for live_grep to work
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
@@ -112,6 +113,9 @@ return packer.startup(function(use)
 
 	-- easymotion / jump to a word
 	use("easymotion/vim-easymotion")
+
+	-- Indent Blankline
+	use("lukas-reineke/indent-blankline.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()
