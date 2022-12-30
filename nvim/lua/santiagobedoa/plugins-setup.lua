@@ -117,6 +117,9 @@ return packer.startup(function(use)
 	-- Indent Blankline
 	use("lukas-reineke/indent-blankline.nvim")
 
+	-- Dashboard (like de home page)
+	use({ "glepnir/dashboard-nvim" })
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
